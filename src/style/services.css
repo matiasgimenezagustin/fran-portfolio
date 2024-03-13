@@ -1,0 +1,146 @@
+.sectionServices{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+}
+.servicesList{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.serviceCard{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid var(--text-color);
+    border-radius: 20px;
+    width: 330px;
+}
+.serviceCard h3{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.serviceCard p{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.serviceCard:hover h3{
+    color: var(--colorPrimario)
+}
+
+.servicesIconsList{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.servicesIconsList svg{
+    width: 70px;
+    font-size: 70px;
+}
+
+.serviceInfo{
+    display: none;
+}
+.serviceContainer:hover {
+    position: absolute;
+    background-color: var(--bg-color);
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    transition: 400ms;
+    align-items: center;
+    gap: 20px
+}
+.serviceContainer:hover .serviceInfo{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+}
+.serviceContainer:hover  .serviceInfo h3{
+    font-size: 2rem;
+}
+
+.serviceContainer:hover  .serviceInfo p{
+    font-size: 20px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1100px){
+    .imageContactMe{
+        display: none;
+    }
+    .servicesList{
+        flex-direction: column;
+        
+
+    }
+    .serviceCard{
+        flex: 1;
+        width: auto;
+        border: none;
+    }
+    .servicesIconsList{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .serviceInfo{
+        display: flex;
+    }
+    .servicesIconsList{
+        overflow-x: auto;
+        max-width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 0;
+        justify-content: start ;
+    }
+    .serviceContainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 40px;
+        padding-bottom: 30px;
+    }
+    .serviceContainer:hover {
+        position:static;
+        background-color: var(--bg-color);
+        z-index: 3;
+        width: 100%;
+        display: flex;
+        transition: 0ms;
+        align-items: center;
+        gap: 30px;
+        
+    }
+    .serviceContainer  .serviceInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 20px
+    }
+    .serviceContainer  .serviceInfo h3{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    
+    .serviceContainer .serviceInfo p{
+        font-size: 15px;
+        text-align: center;
+    }
+    .serviceContainer:hover  .serviceInfo h3{
+        font-size: 1.7rem;
+    }
+    
+    .serviceContainer:hover  .serviceInfo p{
+        font-size: 15px;
+        text-align: center;
+    }
+}

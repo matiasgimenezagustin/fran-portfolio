@@ -1,0 +1,67 @@
+
+.hero{
+    display: flex;
+    height: 90vh ;
+    align-items: center;
+    padding: 2vh 5vw;
+}
+  .hero .heroContent{
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .hero .heroContent .heroTitle h1{
+    font-size: 3.5rem;
+    line-height: 60px;
+    font-weight: 700;
+  }
+  
+  .hero .heroContent .heroDescription{
+    font-weight: 400;
+    font-size: 1.7rem;
+    max-width: 800px;
+    
+  }
+  
+  .hero .heroImage{
+
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: black;
+    border: 2px rgb(85, 85, 85) solid;
+  }
+  
+  .hero .heroImage img{
+    width: 260px;
+    transform: scale(1.15); /* Preguntar gusto */
+  }
+  
+@media screen and (max-width: 1000px){
+    .hero{
+        position: relative;
+    }
+    .heroTitle{
+        width: 80%;
+    }
+    .hero .heroImage{
+        position: absolute;
+        right: 5vw;
+        top: 22%;
+        width: 160px;
+        height: 160px;
+    }
+    .hero .heroImage img{
+        width: 150px;
+    }
+}
+@media screen and (max-width: 800px){
+    .hero .heroImage{
+        display: none;
+    }
+}

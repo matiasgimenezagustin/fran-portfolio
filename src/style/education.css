@@ -1,0 +1,114 @@
+
+.educationImage{
+  flex: 1;
+}
+.educationContainer{
+  display: flex;
+  
+}
+.coursesList{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex:1;
+
+  
+}
+.courseItem{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+.courseItem .decoration{
+  display: flex;
+  width: 50px;
+  flex-direction: column;
+  position: relative;
+}
+.ball{
+  width: 20px;
+  height: 20px;
+  background-color: var(--text-color);
+  border-radius: 50%;
+}
+.line{
+  width: 2px;
+  height: calc(70% );
+  background-color: var(--text-color);
+  position: absolute;
+  left: 10px;
+}
+
+.courseItem .item .courseTitle{
+  color: var(--colorSecundario);
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.courseItem .item .coursePeriod{
+  color: var(--colorPrimario);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.item .courseContent{
+  font-size: 18px;
+}
+/* Tecnologies */
+.tecnologiesList{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .tecnologiesList svg{
+    width: 70px;
+    font-size: 70px;
+  }
+
+@media screen and (max-width: 1100px){
+    .educationImage{
+        display: none;
+    }
+}
+@media screen and (max-width: 500px){
+  .educationSection{
+    margin-top: 100px;
+  }
+  .coursesList{
+    overflow-x: hidden;
+    width: 50vw;
+  }
+  .coursesList .courses{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    flex: 1;
+    padding-left: 0%;
+  }
+  .courseItem{
+    flex-basis: 100%;
+    flex-shrink: 0;
+    height: 30vh;
+  }
+  .line{
+    display: none;
+  }
+  .courseItem .decoration{
+    display: none;
+  }
+  .item{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width:70%;
+  }
+ 
+  .educationContainer{
+    margin-bottom: 30px;
+  }
+}

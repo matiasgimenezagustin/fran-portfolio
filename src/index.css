@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap');
+
+:root{
+  --font-family-text: 'Poppins', sans-serif;
+  --font-family-title: 'Viga', sans-serif;
+  --colorPrimario: #41644A;
+  --bg-color: rgba(18, 14, 14, 1);
+  --text-color: rgba(240, 245, 241, 1);
+  --colorSecundario: rgba(131, 175, 142, 1);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: var(--font-family-text);
+  color: var(--text-color);
+  transition: 400ms all ease-in-out;
+}
+::-webkit-scrollbar {
+  width: 5px;
+
+  background-color: var(--colorSecundario);
+}
+::-webkit-scrollbar-thumb {
+  background-color:  #41644A;
+}
+a{
+  text-decoration: none;
+  color: var(--text-color);
+  transition: 400ms all ease-in-out;
+}
+
+body{
+  background: var(--bg-color);
+  transition: 400ms all ease-in-out;
+  max-width: 1800px;
+/*   display: flex; */
+  align-items: center;
+/*   flex-direction: column; */
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+#root{
+  background: var(--bg-color);
+  transition: 400ms all ease-in-out;
+  max-width: 1800px;
+  display: flex;
+  flex-direction: column;
+}
+header{
+  display: flex;
+  padding: 2vh 5vw;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  background-color: var(--bg-color);
+  z-index: 3;
+  left: 0;
+}
+header .controlsHeader{
+  display: flex;
+  gap: 30px;
+}
+header .controlsHeader button{
+  border: none;
+  background-color: transparent;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav{
+  display: flex;
+  font-size: 1.5rem;
+  gap: 30px;
+  font-weight: 500;
+}
+
+header nav .linkSelected{
+  color:var(--colorPrimario);
+}
+
+header h2{
+  font-family: var(--font-family-title);
+  font-size: 1.6rem;
+}
+.controlsHeader .btn-menu{
+  display: none;
+}
+
+.heroImage{
+  box-shadow: var(--colorPrimario) 0 0 20px;
+  border: none;
+}
+
+
+/* Footer */
+
+.socialMedia{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #393E46;
+  color: white;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  border-radius: 50%;
+
+}
+
+
+.socialMedia svg path{
+  color: white ;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 2vh 5vw;
+}
+
+.copiedMessage{
+  position: fixed;
+  top: 70vh;
+  height: 20vh;
+  width: 70vw;
+  background: rgba(0, 0, 0, 0.904);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: 20px;
+}
+
+@media screen and (max-width: 850px){
+  header nav{
+    display: none;
+  }
+  .controlsHeader .btn-menu{
+    display: flex;
+  }
+  .responsiveNav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+  }
+  header{
+    flex-wrap: wrap;
+  }
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------------------------- */
+
+.bold-title{
+  color: var(--colorPrimario);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+.section{
+  padding: 2vh 5vw;
+}
+
+
+/* Titulo */
+.titleSection{
+  color: var(--colorSecundario);
+  font-weight: 700;
+  font-size: 56px;
+}
+@media screen and (max-width: 500px){
+  .titleSection{
+    font-size: 46px;
+  }
+}
+
+
+
+
+
+@media screen and (max-width:1600px) {
+  html{
+    font-size: 14px;
+  }
+}
+@media screen and (max-width:1200px) {
+  html{
+    font-size: 12px;
+  }
+  .hero .heroContent{
+    flex: 1;
+  }
+}
